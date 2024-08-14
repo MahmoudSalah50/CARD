@@ -1,0 +1,233 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    margin: 0;
+}
+
+
+
+label {
+    display: block;
+    color: blue;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 30px;
+    
+}
+
+input {
+    font-family: inherit;
+    color: hsl(278, 68%, 11%);
+    padding: 8px;
+    border-radius: 6px;
+    border-width: 1px;
+    width: 100%;
+    border-color: hsl(0, 0%, 100%);
+}
+
+input:focus {
+    border-image-source: 2pt solid linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    border-width: 3pt;
+    border-image-slice: 1;
+}
+
+/* input:invalid {
+    border-color: blue;
+} */
+
+#month, #year{
+    width: 60px;
+}
+
+#dateLabel {
+    display: block;
+}
+
+.date {
+    display: inline-block;;
+}
+
+#ccvLabel {
+    display: block;
+}
+
+#ccvNumber {
+    width: 150px;
+}
+
+.ccv {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.left {
+    position: absolute;
+    background-image: url(images/bg-main-desktop.png);
+    height: 100%;
+    width: 500px;
+    left: 0;
+
+}
+
+.right {
+    z-index: 1;
+    position: absolute;
+    left: 60%;
+}
+
+
+.cardFront {
+    position: absolute;
+    background-image: url(images/bg-card-front.png);
+    color: white;
+    width: 440px;
+    height: 240px;
+    border-radius: 9px;
+    padding: 10px;
+    left: 10%;
+    top: 90px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+
+}
+
+.frontTopCard {
+    display: block;
+    height: 130px;
+}
+
+#number {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frontBottomCard {
+    height: 50px;
+    width: 100%;
+}
+
+#name {
+    width: 80%;
+    display: inline-block;;
+}
+
+.cardBack {
+    position: absolute;
+    background-image: url(images/bg-card-back.png);
+    width: 440px;
+    height: 240px;
+    border-radius: 9px;
+    left: 250px;
+    top: 370px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+
+}
+
+#ccvBack {
+    color: white;
+    position: absolute;
+    right: 50px;
+    top: 110px;
+}
+
+
+#cardInformation {
+    width: 290px;
+    height: 300px;
+}
+
+#confirm  {
+    font-family: inherit;
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 35px;
+}
+
+#confirm:focus {
+     border-image-source: 2pt solid linear-gradient(hsl(249, 45%, 61%), hsl(0, 0%, 33%));
+    border-width: 3pt;
+    border-image-slice: 1; 
+
+    /* background-color: blueviolet; */
+}
+
+.thankYou {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankYou img {
+    padding-left: 70px
+}
+
+.thankYou h1 {
+    color: hsl(278, 68%, 11%);
+    font-weight: 400;
+    padding-left: 15px;
+}
+
+.thankYou p {
+    opacity: 50%;
+}
+
+@media (max-width: 661px) {
+    .left {
+        height: 40%;
+        width: 100%;
+        top: 0;
+        /* display: block; */
+    }
+    .right {
+       /* position: inherit; */
+       left: 25%;
+       bottom: 5px;
+    }
+
+    .cardBack{
+        left: 90px;
+        top: 15px;
+        width: 350px;
+        height: 200px;
+        z-index: 0;
+        background-size: 350px 200px;
+    }
+
+    #ccvBack {
+        top: 90px;
+    }
+
+    .cardFront {
+        top: 130px;
+        left: 3 0px;
+        width: 350px;
+        height: 200px;
+        z-index: 1;
+    }
+    #number {
+        font-size: 20px;
+    }
+    .frontBottomCard {
+        font-size: 12px;
+    }
+
+}

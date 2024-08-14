@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Card Detail Form</title>
+  </head>
+  <body>
+    <div class="left"></div>
+    <div class="cardFront">
+      <div class="frontTopCard">
+        <img src="images/card-logo.png" alt="" />
+      </div>
+      <div id="number">0000 0000 0000 0000</div>
+      <div class="frontBottomCard">
+        <p id="name">Cardholder Name</p>
+        <span id="expirationMonth">00</span>
+        /
+        <span id="expirationYear"> 00</span>
+      </div>
+    </div>
+
+    <div class="cardBack">
+      <div id="ccvBack">000</div>
+    </div>
+
+    <div class="right">
+      <div id="cardInformation">
+        <form id="formInformation" action="">
+          <label for="cardholderName">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            name=""
+            id="cardholderName"
+            placeholder="e.g. Mahmoud Salah"
+            required
+          />
+
+          <label for="cardNumber">CARD NUMBER</label>
+          <input
+            type="text"
+            name=""
+            id="cardNumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+            pattern="[0-9/s] {13,19}"
+            maxlength="19"
+            required
+          />
+
+          <div class="date">
+            <label for="number year" id="dateLabel">EXP. DATE (MM/YY)</label>
+
+            <input
+              type="number"
+              name=""
+              id="month"
+              min="1"
+              max="12"
+              placeholder="MM"
+              required
+            />
+            <input
+              type="number"
+              name=""
+              id="year"
+              min="24"
+              placeholder="YY"
+              required
+            />
+          </div>
+
+          <div class="ccv">
+            <label for="ccvNumber" id="ccvLabel">CVC</label>
+            <input
+              type="text"
+              name=""
+              id="ccvNumber"
+              maxlength="3"
+              placeholder="e.g. 123"
+              required
+            />
+          </div>
+          <!-- <div class="thankYou">
+          <img src="images/icon-complete.png" alt="" />
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+        </div> 
+        <button id="confirm" type="submit">Continue</button>-->
+          <button id="confirm" type="submit">Confirm</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
